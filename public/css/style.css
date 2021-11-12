@@ -196,20 +196,23 @@ a {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
+  font-family: "OpenSans", sans-serif;
 }
 
 .elements h2 {
   display: block;
-  border-top: 1px solid #e91e63;
   font-size: 24px;
+  font-family: "OpenSans", sans-serif;
 }
 
 .elements .element-1 {
   border: 1px solid springgreen;
+  padding: 10px;
 }
 
 .elements .element-2 {
-  border: 1px solid rosybrown;
+  border: 1px solid #e91e63;
+  padding: 10px;
 }
 
 .elements ._dynamic_adapt_992 p {

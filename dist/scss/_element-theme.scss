@@ -13,17 +13,20 @@
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 1.5;
+		font-family: $fontfamily;
 	}
 	h2 {
 		display: block;
-		border-top: 1px solid $secondColor;
 		font-size: 24px;
+		font-family: $fontfamily;
 	}
 	.element-1 {
 		border: 1px solid springgreen;
+		padding: 10px;
 	}
 	.element-2 {
-		border: 1px solid rosybrown;
+		border: 1px solid $secondColor;
+		padding: 10px;
 	}
 	._dynamic_adapt_992 {
 		p {
