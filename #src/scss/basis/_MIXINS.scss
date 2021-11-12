@@ -1,0 +1,34 @@
+// ! Файл подключения миксинов
+
+// * Работа со шрифтами
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+// * Адаптивное значение под все размеры экрана
+// TODO $property		Название свойства
+// TODO $startSize	MAX размер шрифта
+// TODO $minSize		MIN размер шрифта
+// TODO $maxWidth		MAX размер экрана
+// TODO $minWidth		MIN размер экрана
+@mixin adaptive-value($property, $startSize, $minSize, $maxWidth, $minWidth) {
+	$addSize: $startSize - $minSize;
+	$valueWidth: $maxWidth - $minWidth;
+	#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$valueWidth}));
+}
+@mixin adaptive-value-1($property, $startSize, $minSize, $maxWidth, $minWidth) {
+	$addSize: $startSize - $minSize;
+	$valueWidth: $maxWidth - $minWidth;
+	#{$property}: calc((#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$valueWidth})) * -1);
+}
+@mixin adaptive-value-tra($property, $startSize, $minSize, $maxWidth, $minWidth) {
+	$addSize: $startSize - $minSize;
+	$valueWidth: $maxWidth - $minWidth;
+	transform: #{$property}#{"("} calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$valueWidth}) #{")"});
+}
