@@ -204,6 +204,14 @@ a {
   font-size: 24px;
 }
 
+.elements .element-1 {
+  border: 1px solid springgreen;
+}
+
+.elements .element-2 {
+  border: 1px solid rosybrown;
+}
+
 .elements ._dynamic_adapt_992 p {
   color: #e91e63;
 }
